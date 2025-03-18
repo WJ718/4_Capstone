@@ -43,31 +43,5 @@ exports.signup = async (req, res, next) => {
 
 
 exports.login = async (req, res, next) => {
-    const {email, password} = req.body;
-    try {
-      const exUser = await User.findOne({ where: { email } });
-      if(!exUser) {
-        return res.status(401).json({ message: '존재하지 않는 사용자입니다.' });
-      }
 
-      const isMatch = await bcrypt.compare(password, exUser.password);
-      if(!isMatch) {
-        return res.status(401).json({ message: '비밀번호가 일치하지 않습니다.' });
-      }
-
-      const token = jwt.sign(
-        { email: newUser.email }, 
-        process.env.JWT_SECRET, 
-        { expiresIn: '1h' } // 토큰 유효 기간: 1시간
-      );
-
-      return res.status(200).json({
-        message: '로그인 성공',
-        token, // token 반환
-    });
-      
-    } catch(err) {
-      console.error(err);
-      return res.status(500).json({message: '서버 오류', error: error.message});
-    }
 };
