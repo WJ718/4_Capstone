@@ -24,7 +24,7 @@ class TouchSignupActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // 가입 버튼 클릭 이벤트
-        binding.submitBtn.setOnClickListener {
+        binding.signupBtn.setOnClickListener {
             sendDataToServer()
         }
     }
@@ -45,7 +45,7 @@ class TouchSignupActivity : AppCompatActivity() {
 
         // POST 요청
         val request = Request.Builder()
-            .url("http://192.168.0.102:4141/auth/signup")
+            .url("http://10.0.2.2:4141/auth/signup")
             .post(requestBody)
             .build()
 

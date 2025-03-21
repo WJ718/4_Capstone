@@ -1,6 +1,5 @@
 package com.example.application
 
-import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
@@ -24,12 +23,13 @@ class TouchLoginActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // 로그인 버튼 클릭 시 서버에 로그인 요청
-        binding.submitBtn.setOnClickListener {
+        binding.loginBtn.setOnClickListener {
             loginUser()
         }
     }
 
     private fun loginUser() {
+        // email , password를 body에 넣어서 POST 요청.
         val email = binding.loginEmail.text.toString().trim()
         val password = binding.loginPassword.text.toString().trim()
 
@@ -45,7 +45,7 @@ class TouchLoginActivity : AppCompatActivity() {
 
         // POST 요청 전송
         val request = Request.Builder()
-            .url("http://192.168.0.102:4141/auth/login") // 서버 URL (최근 수정된 곳)
+            .url("http://10.0.2.2:4141/auth/login") // 서버 URL (최근 수정된 곳)
             .post(requestBody)
             .build()
 
@@ -61,6 +61,7 @@ class TouchLoginActivity : AppCompatActivity() {
                 val responseData = response.body?.string() ?: "{}"
                 // 서버에서 res.status(201)이 되었을 때
                 if (response.isSuccessful) {
+                    // 성공 응답 시의 트리거 호출
                     handleSuccessResponse(responseData)
                 } else {
                     runOnUiThread {
@@ -72,7 +73,6 @@ class TouchLoginActivity : AppCompatActivity() {
         })
     }
 
-    // 
     private fun handleSuccessResponse(responseData: String) {
         try {
             val jsonObject = JSONObject(responseData)
@@ -82,13 +82,14 @@ class TouchLoginActivity : AppCompatActivity() {
             runOnUiThread {
                 showToast(message)
 
+                // 토큰을 sharedPreferences에 저장
                 if (token.isNotEmpty()) {
                     Log.d("JWT", "서버로부터 받은 토큰: $token")
                     saveToken(token)
                 }
 
                 // TODO : 메인 화면으로 이동
-                // startActivity(Intent(this, 클래스파일명::class.java))
+                // startActivity(Intent(this, MenuActivity::class.java))
                 finish()
             }
         } catch (e: JSONException) {
