@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<network-security-config>
-    <domain-config cleartextTrafficPermitted="true">
-        <!--    10.0.2.2 : 같은 PC    -->
-        <domain includeSubdomains="true">10.0.2.2</domain>
-        <!--   192.168.0.104 : 같은 wifi, 다른 기기    -->
-        <domain includeSubdomains="true">192.168.0.104 </domain>
-    </domain-config>
-</network-security-config>
