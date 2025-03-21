@@ -3,17 +3,21 @@ const Sequelize = require('sequelize');
 module.exports = class Schedule extends Sequelize.Model {
     static init(sequelize) {
         return super.init({
-            date: {
-                type:Sequelize.DATE,
-                allowNull:false,
+            schedule_id: {  
+                type: Sequelize.INTEGER,
+                autoIncrement: true,
                 primaryKey: true,
             },
             email: {
-                type:Sequelize.STRING(100),
-                allowNull:false,
+                type: Sequelize.STRING(100),
+                allowNull: false,
             },
-            content: {
-                type:Sequelize.STRING(100),
+            date: {
+                type: Sequelize.DATE,
+                allowNull: false,
+            },
+            memo: {  
+                type: Sequelize.STRING(255),
                 allowNull: false,
                 defaultValue: " ",
             },
@@ -30,7 +34,6 @@ module.exports = class Schedule extends Sequelize.Model {
     }
 
     static associate(db) {
-        // TODO: 관계설정
-        
+        db.Schedule.belongsTo(db.User, { foreignKey: 'email', targetKey: 'email', onDelete: 'CASCADE' });
     }
-}
+};

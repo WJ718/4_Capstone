@@ -26,6 +26,8 @@ module.exports = class User extends Sequelize.Model {
     }
 
     static associate(db) {
-        // TODO: 관계설정
+        // User(1) : Record(N), Schedule(N)
+        db.User.hasMany(db.Record, { foreignKey: 'email', sourceKey: 'email', onDelete: 'CASCADE' });
+        db.User.hasMany(db.Schedule, { foreignKey: 'email', sourceKey: 'email', onDelete: 'CASCADE' });
     }
-}
+};

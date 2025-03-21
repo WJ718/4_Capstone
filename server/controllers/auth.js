@@ -27,12 +27,12 @@ exports.signup = async (req, res, next) => {
     const token = jwt.sign(
       { email: newUser.email }, 
       process.env.JWT_SECRET, 
-      { expiresIn: '1h' } // 토큰 유효 기간: 1시간
+      { expiresIn: '8h' } // 토큰 유효 기간: 1시간
     );
 
     // JSON 응답
     return res.status(201).json({
-      message: '회원가입 성공',
+      message: `회원가입 성공`,
       token,  // JWT 토큰 반환
     });
   } catch (error) {
@@ -43,5 +43,33 @@ exports.signup = async (req, res, next) => {
 
 
 exports.login = async (req, res, next) => {
+  try {
+    const {email, password} = req.body;
+    
+    // 사용자 조회
+    const exUser = await User.findOne({where: {email}});
+    if(!exUser) {
+      return res.status(409).json({ message: '일치하는 사용자가 없습니다.' });
+    }
 
+    // 비밀번호 비교
+    const isMatch = await bcrypt.compare(password, exUser.password);
+    if(!isMatch) {
+      return res.status(409).json({ message: '비밀번호를 확인해주세요.' });
+    }
+
+    const token = jwt.sign(
+      {email : exUser.email},
+      process.env.JWT_SECRET,
+      {expiresIn: '8h'},
+    );
+
+    return res.status(201).json({
+      message: `로그인 성공`,
+      token,  // JWT 토큰 반환
+    });
+  } catch(err) {
+    console.error(err);
+    return res.status(500).json({ message: '서버 오류', error: error.message });
+  }
 };

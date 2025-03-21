@@ -3,20 +3,24 @@ const Sequelize = require('sequelize');
 module.exports = class Record extends Sequelize.Model {
     static init(sequelize) {
         return super.init({
-            date : {
-                type: Sequelize.DATE,
-                allowNull: false,
+            record_id: {  
+                type: Sequelize.INTEGER,
+                autoIncrement: true,
                 primaryKey: true,
             },
             email: {
                 type: Sequelize.STRING(100),
                 allowNull: false,
             },
-            eyesize: {
+            date: {
+                type: Sequelize.DATE,
+                allowNull: false,
+            },
+            eye_size: {  
                 type: Sequelize.FLOAT,
                 allowNull: false,
             },
-            issleep: {
+            is_sleep: {     
                 type: Sequelize.BOOLEAN,
                 allowNull: false,
                 defaultValue: false,
@@ -34,7 +38,6 @@ module.exports = class Record extends Sequelize.Model {
     }
 
     static associate(db) {
-        // TODO : 관계설정
-        
+        db.Record.belongsTo(db.User, { foreignKey: 'email', targetKey: 'email', onDelete: 'CASCADE' });
     }
-}
+};
