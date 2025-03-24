@@ -236,3 +236,4 @@ sleep_detection_thread.start()
 
 motor_thread.join()
 sleep_detection_thread.join()
+>>>>>>> 57ae16f (누락된 파일 추가)
