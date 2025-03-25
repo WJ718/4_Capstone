@@ -28,7 +28,7 @@ exports.signup = async (req, res, next) => {
     const token = jwt.sign(
       { email: newUser.email }, 
       process.env.JWT_SECRET, 
-      { expiresIn: '5h' } // 토큰 유효 기간: 1시간
+      { expiresIn: '5h' }
     );
 
     // JSON 응답
