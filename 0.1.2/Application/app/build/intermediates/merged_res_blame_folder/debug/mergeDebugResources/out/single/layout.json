@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-mergeDebugResources-32:\\layout\\activity_touchlogin.xml",
+        "source": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-main-35:\\layout\\activity_touchlogin.xml"
+    },
+    {
+        "merged": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-mergeDebugResources-32:\\layout\\item_schedule.xml",
+        "source": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-main-35:\\layout\\item_schedule.xml"
+    },
+    {
+        "merged": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-mergeDebugResources-32:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-main-35:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-mergeDebugResources-32:\\layout\\activity_menu.xml",
+        "source": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-main-35:\\layout\\activity_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-mergeDebugResources-32:\\layout\\dialog_memo.xml",
+        "source": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-main-35:\\layout\\dialog_memo.xml"
+    },
+    {
+        "merged": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-mergeDebugResources-32:\\layout\\activity_setting.xml",
+        "source": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-main-35:\\layout\\activity_setting.xml"
+    },
+    {
+        "merged": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-mergeDebugResources-32:\\layout\\activity_study.xml",
+        "source": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-main-35:\\layout\\activity_study.xml"
+    },
+    {
+        "merged": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-mergeDebugResources-32:\\layout\\activity_touchsignup.xml",
+        "source": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-main-35:\\layout\\activity_touchsignup.xml"
+    },
+    {
+        "merged": "com.example.application.app-mergeDebugResources-32:/layout/activity_menu.xml",
+        "source": "com.example.application.app-main-35:/layout/activity_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-mergeDebugResources-32:\\layout\\activity_calendar.xml",
+        "source": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-main-35:\\layout\\activity_calendar.xml"
+    }
+]
