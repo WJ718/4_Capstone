@@ -27,7 +27,7 @@ ws.on('message', (msg) => {
                         };
                         ws.send(JSON.stringify(sleepyMessage));
                         console.log('졸음 감지 신호 전송 완료');
-                    }, 30000);
+                    }, 10000);
                 }
                 break;
 

@@ -16,12 +16,12 @@
         "source": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-main-35:\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-debug-33:\\layout_activity_setting.xml.flat",
-        "source": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-main-35:\\layout\\activity_setting.xml"
-    },
-    {
         "merged": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-debug-33:\\layout_activity_touchsignup.xml.flat",
         "source": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-main-35:\\layout\\activity_touchsignup.xml"
+    },
+    {
+        "merged": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-debug-33:\\layout_activity_setting.xml.flat",
+        "source": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-main-35:\\layout\\activity_setting.xml"
     },
     {
         "merged": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-debug-33:\\xml_network_security_config.xml.flat",
@@ -32,20 +32,20 @@
         "source": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-main-35:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-debug-33:\\xml_data_extraction_rules.xml.flat",
-        "source": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-main-35:\\xml\\data_extraction_rules.xml"
-    },
-    {
         "merged": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-debug-33:\\layout_dialog_memo.xml.flat",
         "source": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-main-35:\\layout\\dialog_memo.xml"
     },
     {
-        "merged": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-debug-33:\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-main-35:\\mipmap-mdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-debug-33:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-main-35:\\xml\\data_extraction_rules.xml"
     },
     {
         "merged": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-debug-33:\\mipmap-xhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-main-35:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-debug-33:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-main-35:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
         "merged": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-debug-33:\\layout_activity_touchlogin.xml.flat",
@@ -58,6 +58,10 @@
     {
         "merged": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-debug-33:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-main-35:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-debug-33:\\drawable_ic_notification.xml.flat",
+        "source": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-main-35:\\drawable\\ic_notification.xml"
     },
     {
         "merged": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-debug-33:\\mipmap-hdpi_ic_launcher_round.webp.flat",
@@ -76,12 +80,16 @@
         "source": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-main-35:\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.example.application.app-debug-33:/drawable_ic_notification.xml.flat",
-        "source": "com.example.application.app-main-35:/drawable/ic_notification.xml"
+        "merged": "com.example.application.app-debug-33:/layout_dialog_memo.xml.flat",
+        "source": "com.example.application.app-main-35:/layout/dialog_memo.xml"
     },
     {
         "merged": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-debug-33:\\mipmap-hdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-main-35:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.application.app-debug-33:/layout_activity_calendar.xml.flat",
+        "source": "com.example.application.app-main-35:/layout/activity_calendar.xml"
     },
     {
         "merged": "C:\\Users\\wjyou\\.gradle\\daemon\\8.11.1\\com.example.application.app-debug-33:\\layout_activity_study.xml.flat",

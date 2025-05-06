@@ -24,17 +24,30 @@ class CalendarActivity : AppCompatActivity() {
         binding = ActivityCalendarBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val pref = getSharedPreferences("schedule", MODE_PRIVATE)
-        for ((timestamp, memo) in pref.all) {
-            addScheduleToList(timestamp, memo.toString())
-        }
-
-        // 캘린더의 날짜 부분 클릭 시 일정 추가 메서드 호출
+        // 캘린더에서 날짜 선택 시 실행
         binding.calendarView.setOnDateChangeListener { _, year, month, dayOfMonth ->
             selectedDate = String.format("%04d-%02d-%02d", year, month + 1, dayOfMonth)
+
+            val container = findViewById<LinearLayout>(R.id.scheduleListContainer)
+            container.removeAllViews()
+
+            val pref = getSharedPreferences("schedule", MODE_PRIVATE)
+
+            // 선택한 날짜의 메모들을 최신순으로 정렬
+            val filtered = pref.all
+                .filter { it.key.startsWith(selectedDate) }
+                .toList()
+                .sortedByDescending { it.first }
+
+            for ((timestamp, memo) in filtered) {
+                addScheduleToList(timestamp, memo.toString())
+            }
+
+            // 일정 추가 다이얼로그 호출
             showMemoDialog()
         }
     }
+
 
     private fun showMemoDialog() {
         val dialogView = LayoutInflater.from(this).inflate(R.layout.dialog_memo, null)
@@ -46,7 +59,10 @@ class CalendarActivity : AppCompatActivity() {
             .setView(dialogView)
             .setPositiveButton("저장") { _, _ ->
                 val memo = memoEditText.text.toString()
-                val timestamp = getCurrentTimestamp()
+
+                // ✅ 선택한 날짜 + 현재 시간 조합
+                val timestamp = "${selectedDate}T${SimpleDateFormat("HH:mm:ss.SSS", Locale.getDefault()).format(Date())}"
+
                 val userPref = getSharedPreferences("user_prefs", MODE_PRIVATE)
                 val email = userPref.getString("email", "") ?: ""
 
@@ -80,7 +96,7 @@ class CalendarActivity : AppCompatActivity() {
                             }
                         } else {
                             runOnUiThread {
-                                Toast.makeText(this@CalendarActivity, "서버 오류: ${response.code}", Toast.LENGTH_SHORT).show()
+                                Toast.makeText(this@CalendarActivity, "서버 오류", Toast.LENGTH_SHORT).show()
                             }
                         }
                     }
@@ -133,7 +149,7 @@ class CalendarActivity : AppCompatActivity() {
 
                 override fun onResponse(call: Call, response: Response) {
                     runOnUiThread {
-                        Toast.makeText(this@CalendarActivity, "삭제 완료 (${response.code})", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@CalendarActivity, "삭제 완료", Toast.LENGTH_SHORT).show()
                     }
                 }
             })
@@ -187,11 +203,5 @@ class CalendarActivity : AppCompatActivity() {
             }
             .setNegativeButton("취소", null)
             .show()
-    }
-
-    private fun getCurrentTimestamp(): String {
-        val now = System.currentTimeMillis()
-        val sdf = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS", Locale.getDefault())
-        return sdf.format(Date(now))
     }
 }

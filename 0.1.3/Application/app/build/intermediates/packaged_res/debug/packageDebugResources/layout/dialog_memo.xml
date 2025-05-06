@@ -7,7 +7,7 @@
 
     <EditText
         android:id="@+id/memoEditText"
-        android:hint="일정을 입력하세요"
+        android:hint="내용을 입력하세요"
         android:inputType="text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
