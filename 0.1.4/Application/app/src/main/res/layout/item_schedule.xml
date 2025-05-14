@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#FFFFFF"
+    android:padding="12dp"
+    android:layout_marginBottom="8dp"
+    android:elevation="2dp">
+
+    <!-- 메모 텍스트 -->
+    <TextView
+        android:id="@+id/scheduleText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="#333333"
+        android:textSize="16sp"
+        android:textStyle="normal" />
+
+    <!-- 수정 버튼 -->
+    <Button
+        android:id="@+id/editButton"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:text="수정"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:backgroundTint="#4CAF50"
+        android:elevation="2dp"
+        android:layout_marginStart="8dp" />
+
+    <!-- 삭제 버튼 -->
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:text="삭제"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:backgroundTint="#F44336"
+        android:elevation="2dp"
+        android:layout_marginStart="8dp" />
+</LinearLayout>

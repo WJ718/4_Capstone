@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#FAFAFA"
+    android:padding="24dp">
+
+    <Button
+        android:id="@+id/signup"
+        android:layout_width="363dp"
+        android:layout_height="60dp"
+        android:text="회원가입"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#4CAF50"
+        android:elevation="4dp"
+        android:layout_marginBottom="24dp" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="363dp"
+        android:layout_height="60dp"
+        android:text="로그인"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#4CAF50"
+        android:elevation="4dp" />
+
+</LinearLayout>
+
