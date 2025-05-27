@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="skyblue">#d1e0fc</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">Application</string>
+    <string name="kakao_api_key">b9bb535f7e55facd7956bd44ceeb8b22</string>
+    <style name="Base.Theme.Application" parent="Theme.AppCompat.Light">
+        
+        
+    </style>
+    <style name="Theme.Application" parent="Theme.MaterialComponents.DayNight.NoActionBar"/>
+</resources>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <!-- 상단 탭 (MenuActivity와 동일하게 고정) -->
+        <LinearLayout
+            android:id="@+id/topTabs"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:orientation="horizontal"
+            android:background="#FFFFFF"
+            android:layout_marginBottom="32dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp">
+
+            <TextView
+                android:id="@+id/tabApp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="학습관리 앱"
+                android:textColor="#333333"
+                android:textStyle="bold"
+                android:background="@android:color/transparent" />
+
+            <TextView
+                android:id="@+id/tabSettings"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="설정"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:background="#4CAF50" />
+        </LinearLayout>
+
+        <!-- 소리 설정 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="소리 설정"
+            android:textSize="20sp"
+            android:textColor="#333333"
+            android:textStyle="bold"
+            android:layout_marginLeft="15dp"/>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchVolume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:scaleX="1.4"
+            android:scaleY="1.4"
+            android:layout_marginBottom="40dp" />
+
+        <!-- 밝기 설정 -->
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="밝기 설정"
+            android:textSize="20sp"
+            android:textColor="#333333"
+            android:layout_margin="15dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <SeekBar
+            android:id="@+id/seekBarBrightness"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:max="100"
+            android:progress="100" />
+    </LinearLayout>
+</ScrollView>

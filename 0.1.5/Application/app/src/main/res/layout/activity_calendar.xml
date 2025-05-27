@@ -1,0 +1,54 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:focusedMonthDateColor="#000000"
+    android:unfocusedMonthDateColor="#999999"
+    android:weekSeparatorLineColor="#CCCCCC"
+    android:selectedWeekBackgroundColor="#4CAF50">
+
+    <LinearLayout
+        android:id="@+id/rootLayout"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- 상단 녹색 라인 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="#4CAF50"
+            android:layout_marginBottom="4dp" />
+
+        <!-- CalendarView -->
+        <CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- 하단 녹색 라인 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="#4CAF50"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 일정 리스트가 표시될 곳 -->
+        <TextView
+            android:text="📌 저장된 메모"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#333333"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/scheduleListContainer"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</ScrollView>
