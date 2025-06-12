@@ -8,7 +8,8 @@
 
 ### 주제: Smart Study Desk App (졸음 방지 · 공기질 감지 · 학습 관리 앱)
 
-[시스템 구성도](./images/configuration diagram.png)
+[시스템 구성도]
+<img src="./images/configuration_diagram.png"/>
 - 본 애플리케이션은 라즈베리파이 기반의 스마트 책상과 연동되어, 졸음 감지 및 CO₂ 농도 알림, 일정 관리 기능을 제공합니다.  
 
 ### 시스템 구성
@@ -20,7 +21,7 @@
 ---
 
 ### E-R 다이어그램
-(./images/ER diagram.png)
+<img src="./images/ER_diagram.png"/>
 
 ---
 
@@ -38,6 +39,6 @@
 ---
 
 ### 서버 호스팅
-(./images/aws.png)
+<img src="./images/aws.png"/>
 - AWS EC2 인스턴스를 통해 글로벌 서비스가 가능합니다.
 - 애플리케이션과 서버는 aws에 호스팅된 퍼블릭 IP주소를 통해 상호 연결할 수 있습니다.
