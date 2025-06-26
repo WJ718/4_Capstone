@@ -1,12 +1,8 @@
-# 4_Capstone
-스터디 인바이어 팀
+### [개발자]
+윤원준 - 서버, 안드로이드 애플리케이션 제작
+강희준 - 하드웨어 제작
 
-### [팀원]
-강희준
-서치우
-윤원준
-
-### 주제: Smart Study Desk App (졸음 방지 · 공기질 감지 · 학습 관리 앱)
+### 주제: Smart Study Desk App (개인용 학습 관리 모듈 & 앱)
 
 [시스템 구성도]
 <img src="./images/configuration_diagram.png"/>
