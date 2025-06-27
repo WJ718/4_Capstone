@@ -38,3 +38,12 @@
 <img src="./images/aws.png"/>
 - AWS EC2 인스턴스를 통해 글로벌 서비스가 가능합니다.
 - 애플리케이션과 서버는 aws에 호스팅된 퍼블릭 IP주소를 통해 상호 연결할 수 있습니다.
+
+### 애플리케이션 구성도
+<img src="./images/appsystem.png"/>
+
+### 애플리케이션 디자인
+<img src="./images/app1.png"/>
+<img src="./images/app2.png"/>
+<img src="./images/app3.png"/>
+
