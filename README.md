@@ -45,8 +45,11 @@
 ---
 
 
+
 ### 애플리케이션 구성도
 <img src="./images/appsystem.png"/>
+
+---
 
 ### 애플리케이션 디자인
 <img src="./images/app1.png"/>
